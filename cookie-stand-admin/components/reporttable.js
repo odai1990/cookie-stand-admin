@@ -6,14 +6,13 @@ export default function ReportTable(props) {
     return (
 
 
-
         <section className="grid text-center p-10">
 
 
             
 
             {
-                props.store == "" ? <p className="m-3">No Cookie Stands Available</p> :
+                props.store.info.length==0 ? <p className="m-3">No Cookie Stands Available</p> :
 
 
 
@@ -36,7 +35,7 @@ export default function ReportTable(props) {
 
                 </thead>
                 <tbody className="border border-collapse border-gray-900">
-                    {props.store.map((data,i) => {
+                    {props.store.info.map((data,i) => {
                           
                         return (
                             <tr className={i%2==0?" border border-collapse border-gray-900":"bg-green-500 border border-collapse border-gray-900"}>
@@ -64,7 +63,7 @@ export default function ReportTable(props) {
                 <tfoot className="bg-green-500 border border-collapse border-gray-900">
                     <tr className="border border-collapse border-gray-900" >
                         <th className="border border-collapse border-gray-900">Totals</th>
-                        {props.total_vertical.map(data => {
+                        {props.store.total_vertical.map(data => {
                             return (
                                 <td className="border border-collapse border-gray-900">{data}</td>
                             )
