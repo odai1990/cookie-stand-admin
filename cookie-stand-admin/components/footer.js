@@ -1,17 +1,11 @@
+import React from 'react'
 
-
-
-
-
-
-export default function Footer(props) {
- 
-  return (    
-
-      <footer className="p-2 flex flex-row justify-start bg-green-400">
-         <p>{props.count.length} Location Word Wide</p>           
-        
-      </footer>
-  
-  )
+function Footer(props) {
+    return (
+        <footer>
+        <p className='float-left p-4 mx-auto bg-green-600 w-screen font-semibold text-center'> {props.leng} Locations World Wide</p>
+        </footer>
+    )
 }
+
+export default Footer

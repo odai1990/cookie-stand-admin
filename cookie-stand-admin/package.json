@@ -10,15 +10,16 @@
   },
 
   "dependencies": {
-    "next": "11.0.1",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "jsonwebtoken": "^8.5.1",
+    "axios": "^0.21.1",
+    "react": "^17.0.2",
+    "next": "latest",
+    "react-if": "^4.0.1",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.1",
-    "eslint": "7.32.0",
-    "eslint-config-next": "11.0.1",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+    "tailwindcss": "^2.2.4",
+    "postcss": "^8.3.5",
+    "autoprefixer": "^10.2.6"
   }
 }

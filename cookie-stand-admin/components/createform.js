@@ -1,40 +1,29 @@
+import React from 'react'
 
-export default function CreateForm(props) {
-  
-
+function CreateForm(props) {
     return (
-     
-     
-      <form className="flex flex-col  bg-green-400 rounded-md" onSubmit={props.onCreate}>
-        <h1 className="p-2">Create Cookie Stand</h1>
-        <div className="grid grid-rows-1 grid-flow-col m-3 ">
-          <label>Location</label>
-          <input type="text" name="location" placeholder="Cookie Stand Location" />
-        </div>
-  
-        <div className="grid grid-rows-1 grid-flow-col ">
-          <div className="flex flex-col p-2 bg-green-500 m-3">
-            <label>Minimum Customers per Hour</label>
-            <input type="number" name="min" />
+        <form onSubmit = {props.submit_handler}>
+          <div className='p-3 mb-4'>
+          <label className='font-medium'>Location </label>
+          <input className='w-11/12 bg-gray-100' name='loc' required />
           </div>
-          <div className="flex flex-col p-2 bg-green-500 m-3">
-            <label >Maximum Customers per Hour</label>
-            <input name='max' type="number" />
+          <div id = 'bottom_container' className = 'flex flex-row mx-auto space-x-2'>
+            <div className='w-1/4 bg-green-200 rounded-md flex flex-col justify-center items-center'>
+              <label className='font-medium'>Minimum Customers per Hour</label>
+              <input name='min' type='number' className = 'w-10/12' required />
+            </div>
+            <div className='w-1/4 bg-green-200 rounded-md flex flex-col justify-center items-center'>
+              <label className='font-medium'>Maximum Customers per Hour</label>
+              <input name='max' type='number' className = 'w-10/12' required />
+            </div>
+            <div className='w-1/4 bg-green-200 rounded-md flex flex-col justify-center items-center'>
+              <label className='font-medium'>Average Cookies per Sale</label>
+              <input name = 'avg' type='float' className = 'w-10/12' required />
+            </div>
+            <button className = 'w-1/4 h-16 bg-green-500 font-bold rounded-md'>Create</button>
           </div>
-          <div className="flex flex-col p-2 bg-green-500 m-3">
-            <label >Average Cookies per Sale</label>
-            <input type="number" name="avg" />
-          </div>
-  
-          <button className="px-4 py-1 mx-2 bg-green-600  text-green-100 m-3" type="submit">Create</button>
-        </div>
-      </form>
-   
-  
-       
-     
-     
+        </form>
     )
-  }
-  
-  
+}
+
+export default CreateForm
