@@ -3,7 +3,7 @@ import React from 'react'
 import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
-import CreateForm from '../components/CreateForm'
+import CreateForm from '../components/createform'
 import ReportTable from '../components/ReportTable'
 
 import axios from 'axios'
