@@ -4,6 +4,7 @@ import Main from "./main";
 import Footer from "./footer";
 import { useState } from 'react'
 
+
 export default function CookieStandAdmin(props){
     const [numberoflocaton,senumberoflocaton] = useState(0)
     return(
@@ -14,8 +15,11 @@ export default function CookieStandAdmin(props){
 
       <Main senumberoflocaton={senumberoflocaton} numberoflocaton={numberoflocaton}/>
 
+
       
       <Footer numberoflocaton={numberoflocaton}/>
     </div>
     );
+
   }
+

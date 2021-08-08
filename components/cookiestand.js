@@ -26,7 +26,7 @@ function Cookiestand(props) {
       const config = {headers: {'Authorization': 'Bearer ' + props.token}};
       let shops = await axios.get(props.postsUrl, config)
       let arr = []
-      console.log(shops.data)
+
       shops.data.forEach(shop=>{
         let temp = {}
         temp.location = shop.location
@@ -55,9 +55,7 @@ function Cookiestand(props) {
         for (let j=0; j<=14; j++){
           initial[j]+= locations[i].hourly_sales[j]
         }
-      }
-      console.log(locations)
-      console.log(initial)
+
       setSumOfSums(initial)
     }
 
@@ -78,8 +76,9 @@ function Cookiestand(props) {
           sum+=val
         }
         salesPerHour.push(sum)
-        new_shop['hourly_sales'] = salesPerHour
-        console.log(new_shop)
+
+        new_shop['hourly_sales'] = salesPerHour   
+
         // reset the input fields
         document.querySelectorAll('input').forEach(element=>{
           element.value = ''

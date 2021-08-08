@@ -14,6 +14,7 @@ export default function Home() {
   const [token, setToken] = useState('')
   const [refreshToken, setRefreshToken] = useState('')
 
+
   useEffect(() => {
     try {
       const user = jwt.decode(token)
@@ -21,6 +22,7 @@ export default function Home() {
     } catch (error) {
       console.log('invalid token')
     }
+
 
   }, [token])
 
@@ -30,6 +32,7 @@ export default function Home() {
 
       setToken(tokenr.data.access)
       console.log(token)
+
       setRefreshToken(tokenr.data.refresh)
     } catch (error) {
       console.log('an error occurred during validation')
@@ -40,3 +43,4 @@ export default function Home() {
     <Cookiestand token = {token} postsUrl = {postsUrl} />
   )
 }
+
