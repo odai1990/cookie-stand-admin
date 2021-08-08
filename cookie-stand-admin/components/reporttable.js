@@ -25,7 +25,7 @@ export default function ReportTable(props) {
                       {
                                 time.map(data => {
                                     return (
-                                            <th className="">{data}</th>
+                                            <th key={data} className="">{data}</th>
 
                                             )
                                         })
@@ -39,14 +39,14 @@ export default function ReportTable(props) {
                     {props.store.map((data,i) => {
                           
                         return (
-                            <tr className={i%2==0?" border border-collapse border-gray-900":"bg-green-500 border border-collapse border-gray-900"}>
+                            <tr key={i} className={i%2==0?" border border-collapse border-gray-900":"bg-green-500 border border-collapse border-gray-900"}>
                                 <td className="border border-collapse border-gray-900" >{data.location}</td>
                                 {data.hourly_sales.map(data => {
                                   
 
                                     return (
                                         
-                                        <td className="border border-collapse border-gray-900" >{data}</td>
+                                        <td key={data} className="border border-collapse border-gray-900" >{data}</td>
                                     )
                                    
 
@@ -66,7 +66,7 @@ export default function ReportTable(props) {
                         <th className="border border-collapse border-gray-900">Totals</th>
                         {props.total_vertical.map(data => {
                             return (
-                                <td className="border border-collapse border-gray-900">{data}</td>
+                                <td key={data} className="border border-collapse border-gray-900">{data}</td>
                             )
                         })}
                        
