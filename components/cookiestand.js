@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from '../components/header'
 import Footer from '../components/footer'
 import CreateForm from '../components/createform'
-import ReportTable from '../components/ReportTable'
+import ReportTable from '../components/reporttable'
 
 import axios from 'axios'
 
