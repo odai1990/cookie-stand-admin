@@ -1,3 +1,4 @@
+
 import React from 'react'
 import Link  from 'next/link'
 function out() {
@@ -11,3 +12,4 @@ function out() {
 }
 
 export default out
+

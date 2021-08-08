@@ -1,3 +1,4 @@
+
 import Head from 'next/head'
 
 export default function Head1(props){
@@ -8,4 +9,5 @@ export default function Head1(props){
         </Head>
     );
   }
+
 

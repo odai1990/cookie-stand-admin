@@ -1,3 +1,4 @@
+
 import Head1 from "./head";
 import Header from "./header";
 import Main from "./main";
@@ -19,3 +20,4 @@ export default function CookieStandAdmin(props){
     </div>
     );
   }
+

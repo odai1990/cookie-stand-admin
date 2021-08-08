@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {time} from '../data'
 function ReportTable(props) {
@@ -23,10 +24,7 @@ function ReportTable(props) {
             if (i%2 == 0) {
               return(
                 <tr key={i} className='bg-gray-100 border-b border-gray-200 text-center bg-green-200'>
-                  <td className='px-10 py-3 text-center'><div><p>{location.location}</p><svg width="100" height="100">
-                  <img src = "delete.svg" alt="My Happy SVG"/>
-</svg>
-</div></td>
+                  <td className='px-10 py-3 text-center'>{location.location}</td>
                   {
                     location.hourly_sales.map(val=>{
                       return(
