@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import React from 'react';
 import { working_time } from '../data.js'
 import { If, Else, Then } from 'react-if';
+
 
 export default function Main(props) {
 
@@ -99,6 +99,7 @@ function CreateForm(props) {
 
     );
 
+
 }
 
 function ReportTable(props) {
@@ -117,7 +118,7 @@ function ReportTable(props) {
 
                             <th>Location</th>
                             {props.working_time.map(item => {
-                                return (<th key={item} >{item}</th>)
+                                return (<th key={item}>{item}</th>)
                             })}
                             <th >Totals</th>
 
@@ -165,4 +166,3 @@ function ReportTable(props) {
 
     );
 }
-

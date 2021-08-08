@@ -1,4 +1,3 @@
-
 import React from 'react'
 import Link  from 'next/link'
 function out() {
@@ -10,6 +9,7 @@ function out() {
         </div>
     )
 }
+
 
 export default out
 

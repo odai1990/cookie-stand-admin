@@ -1,5 +1,5 @@
-
 import React from 'react'
+
 
 function CreateForm(props) {
     return (
@@ -7,6 +7,7 @@ function CreateForm(props) {
           <div className='p-3 mb-4'>
           <label className='font-medium'>Location </label>
           <input className='w-11/12 bg-gray-100' name='loc' required />
+
           </div>
           <div id = 'bottom_container' className = 'flex flex-row mx-auto space-x-2'>
             <div className='w-1/4 bg-green-200 rounded-md flex flex-col justify-center items-center'>
@@ -23,6 +24,7 @@ function CreateForm(props) {
             </div>
             <button className = 'w-1/4 h-16 bg-green-500 font-bold rounded-md'>Create</button>
           </div>
+
         </form>
     )
 }

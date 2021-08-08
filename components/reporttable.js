@@ -1,29 +1,35 @@
 
 import React from 'react'
+import { If, Then, Else } from 'react-if'
 import {time} from '../data'
 function ReportTable(props) {
-
+  console.log(props.locations)
+  console.log('aaaaaaaaaaaa')
     return (
         <div className='flex justify-center'>
-           
-            {props.locations.length!=0?
+            <If condition={props.locations.length}>
+          <Then>
+
             <table className='rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800 text-center'>
               <thead className='text-left border-b-2 border-gray-300 bg-green-400 text-center'>
                 {
                   time.map(element=>{
                     return(
-                      <th className='px-4 py-3 text-center'>{element}</th> 
+
+                      <th key={element} className='px-4 py-3 text-center'>{element}</th> 
+
                     )
                   })
                 }
               </thead>
         {
           
-          props.locations.map((location,i)=>{
-            
-            if (i%2 == 0) {
+
+          props.locations.map((location,idx)=>{
+            if (idx%2 == 0) {
               return(
-                <tr key={i} className='bg-gray-100 border-b border-gray-200 text-center bg-green-200'>
+                <tr key={idx} className='bg-gray-100 border-b border-gray-200 text-center bg-green-200'>
+
                   <td className='px-10 py-3 text-center'>{location.location}</td>
                   {
                     location.hourly_sales.map(val=>{
@@ -36,7 +42,9 @@ function ReportTable(props) {
             }
             else {
               return(
-                <tr key={i} className='bg-gray-100 border-b border-gray-50 text-center bg-green-100'>
+
+                <tr key={idx} className='bg-gray-100 border-b border-gray-50 text-center bg-green-100'>
+
                   <td className='px-4 py-3 text-center'>{location.location}</td>
                   {
                     location.hourly_sales.map(val=>{
@@ -61,11 +69,13 @@ function ReportTable(props) {
         }
         </tr>
             </table>
-:
-         
+
+          </Then>
+          <Else>
             <h2 className='text-center font-medium text-2xl'>No Cookie Stands Available</h2>
-      
-      }
+          </Else>
+        </If>
+
         </div>
     )
 }
