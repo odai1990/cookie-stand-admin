@@ -28,7 +28,8 @@ export default function Home() {
     try {
       const tokenr = await axios.post(tokenUrl, data)
 
-      setToken(tokenr.data.access)   
+      setToken(tokenr.data.access)
+      console.log(token)
       setRefreshToken(tokenr.data.refresh)
     } catch (error) {
       console.log('an error occurred during validation')

@@ -116,7 +116,7 @@ function ReportTable(props) {
 
                             <th>Location</th>
                             {props.working_time.map(item => {
-                                return (<th key={item} >{item}</th>)
+                                return (<th key={item}>{item}</th>)
                             })}
                             <th >Totals</th>
 
