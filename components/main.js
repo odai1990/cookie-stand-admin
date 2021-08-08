@@ -116,7 +116,7 @@ function ReportTable(props) {
 
                             <th>Location</th>
                             {props.working_time.map(item => {
-                                return (<th >{item}</th>)
+                                return (<th key={item} >{item}</th>)
                             })}
                             <th >Totals</th>
 
@@ -125,11 +125,11 @@ function ReportTable(props) {
                         <tbody className="border border-collapse border-gray-900">
                             {props.allData.map(item => {
                                 return (
-                                    <tr className="border border-collapse border-gray-900">
+                                    <tr key={item} className="border border-collapse border-gray-900">
                                         <td className="border border-collapse border-gray-900" >{item.location}</td>
                                         {item.hourly_sales.map(item => {
                                             return (
-                                                <td className="border border-collapse border-gray-900" >{item}</td>
+                                                <td key={item} className="border border-collapse border-gray-900" >{item}</td>
                                             )
 
                                         })}
@@ -148,7 +148,7 @@ function ReportTable(props) {
                                 <th className="border border-collapse border-gray-900">Totals</th>
                                 {props.totalperhour.map(item => {
                                     return (
-                                        <td className="border border-collapse border-gray-900">{item}</td>
+                                        <td key={item} className="border border-collapse border-gray-900">{item}</td>
                                     )
                                 })}
                                 <td className="border border-collapse border-gray-900">{props.totaloftotal}</td>

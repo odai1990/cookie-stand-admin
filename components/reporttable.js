@@ -30,7 +30,7 @@ function ReportTable(props) {
                   {
                     location.hourly_sales.map(val=>{
                       return(
-                      <td className='px-4 py-3 text-center'>{val}</td>
+                      <td key={val} className='px-4 py-3 text-center'>{val}</td>
                       )})
                   }
                 </tr>
@@ -43,7 +43,7 @@ function ReportTable(props) {
                   {
                     location.hourly_sales.map(val=>{
                       return(
-                      <td className='px-4 py-3 text-center'>{val}</td>
+                      <td key={val} className='px-4 py-3 text-center'>{val}</td>
                       )})
                   }
                 
@@ -57,7 +57,7 @@ function ReportTable(props) {
         {
           props.sumOfSums.map(value=>{
             return(
-              <th className='px-4 py-3 text-center'>{value}</th>
+              <th key={value} className='px-4 py-3 text-center'>{value}</th>
             )
           })
         }

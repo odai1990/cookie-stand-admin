@@ -8,7 +8,6 @@
     "start": "next start",
     "lint": "next lint"
   },
-
   "dependencies": {
     "jsonwebtoken": "^8.5.1",
     "axios": "^0.21.1",
